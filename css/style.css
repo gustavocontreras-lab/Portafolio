@@ -73,7 +73,7 @@ body {
 .hero-section {
     min-height: 60vh;
     /* Reemplaza 'hero-bg.jpg' con la imagen de escritorio oscura */
-    background: linear-gradient(rgba(22, 26, 35, 0.85), rgba(22, 26, 35, 0.85)), url('../ImagenInicial1.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(22, 26, 35, 0.85), rgba(22, 26, 35, 0.85)), url('../imagenes/ImagenInicial1.jpg') center/cover no-repeat;
 }
 
 /* Contenedor de Imagen "Nosotros" */
