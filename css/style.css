@@ -1,0 +1,127 @@
+
+/* ========================================================
+   Variables de Color (Basadas en el prototipo)
+======================================================== */
+:root {
+    --bg-main-dark: #1E232E;    /* Fondo principal más oscuro */
+    --bg-section-dark: #262B38; /* Fondo secundario de sección */
+    --bg-card: #2B3140;         /* Fondo de tarjetas y formularios */
+    --bg-nav: #161A23;          /* Fondo del Navbar y Footer */
+    --accent-color: #F8B133;    /* Amarillo/Dorado institucional */
+    --text-light-gray: #A0A5B5; /* Gris claro para párrafos */
+}
+
+/* ========================================================
+   Estilos Generales
+======================================================== */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    padding-top: 76px; /* Compensa el fixed-top del navbar */
+}
+
+.bg-main-dark { background-color: var(--bg-main-dark) !important; }
+.bg-section-dark { background-color: var(--bg-section-dark) !important; }
+.bg-dark-nav { background-color: var(--bg-nav) !important; }
+.bg-card { background-color: var(--bg-card) !important; }
+
+.text-accent { color: var(--accent-color) !important; }
+.text-light-gray { color: var(--text-light-gray) !important; }
+
+/* Botón Principal Personalizado */
+.btn-accent {
+    background-color: var(--accent-color);
+    color: #161A23;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+    background-color: #dca029;
+    color: #000;
+}
+
+/* Enlaces Hover */
+.hover-accent:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Divisor de Títulos (Línea amarilla debajo de los H2) */
+.title-divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Logo Cuadrado */
+.logo-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.bg-accent { background-color: var(--accent-color) !important; }
+
+/* ========================================================
+   Secciones Específicas
+======================================================== */
+
+/* Hero Section (Añade una imagen de fondo de oficina/teclado si tienes una) */
+.hero-section {
+    min-height: 60vh;
+    /* Reemplaza 'hero-bg.jpg' con la imagen de escritorio oscura */
+    background: linear-gradient(rgba(22, 26, 35, 0.85), rgba(22, 26, 35, 0.85)), url('../ImagenInicial1.jpg') center/cover no-repeat;
+}
+
+/* Contenedor de Imagen "Nosotros" */
+.img-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* Borde inferior dorado para la foto (como en el prototipo) */
+.border-accent {
+    border-bottom: 5px solid var(--accent-color);
+    border-right: 5px solid var(--accent-color);
+}
+
+/* Tarjetas de Servicios */
+.card {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Cajas de Logos de Clientes */
+.client-box {
+    border-radius: 8px;
+    height: 120px; /* Altura fija para uniformidad */
+}
+.client-img {
+    max-height: 60px;
+    max-width: 100%;
+    /* Si los logos tienen fondo blanco, usar mix-blend-mode o filtros para adaptarlos al fondo oscuro */
+    filter: grayscale(100%) brightness(200%); /* Hace los logos blancos/grises si son de color */
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+.client-box:hover .client-img {
+    filter: grayscale(0%) brightness(100%);
+    opacity: 1;
+}
+
+/* Formularios Dark Theme */
+.form-control-dark {
+    background-color: #1E232E !important;
+    border: 1px solid #3A4155 !important;
+    color: #FFF !important;
+}
+.form-control-dark:focus {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 0.25rem rgba(248, 177, 51, 0.25) !important;
+}
